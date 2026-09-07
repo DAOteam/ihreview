@@ -103,6 +103,15 @@ updated_at: "2026-09-07"
 - 验收标准：重新抓取站点地图全部页面并检查登录相关界面，不再出现 `unlimited`、`no limits`、`no daily cap`、`no quota wall`、`there is no limit`、`as many tries as it takes` 或语义等价的无限使用承诺。32 个独立功能页均有一个 `Tool facts` 摘要，四项固定规则逐字一致，`Input` 与实际上传控件及校验一致，`Output` 与实际下载结果一致。首页 Workspace 逐字显示指定说明，登录弹窗标题逐字为 `Create with ImageHub`。同一用户在任意工具组合中成功开始的前三个免费任务共同消耗当日 3 次额度，第四个任务按现有额度规则被阻止；已有未完成任务时不能同时开始第二个任务；成功输出不包含 ImageHub 水印。页面可见摘要、FAQ、Meta、Open Graph、Twitter 和 JSON-LD 不存在互相冲突的额度、水印、并发或登录说明。
 - 不要修改：不要把额度改成每个工具各 3 次，不要把失败、取消、政策拦截或重复请求是否计入额度另作推断；不要改变现有用户识别方式、每日重置时区、额度扣减时点、错误文案、排队机制、登录要求或免费任务的保存与删除规则；不要承诺永久免费、无限使用、固定处理速度、固定输出尺寸或所有工具都输出同一格式；不要为输出添加水印，不要要求用户登录后才能使用独立功能落地页。
 
+### 在 Workspace 免费额度用完时显示明确提示弹窗
+
+- 优先级：`P1`
+- 页面或界面：首页登录后的集合 Workspace 和登录后的完整 Workspace；覆盖桌面端与移动端的所有任务提交入口
+- 当前问题与线上证据：用户确认全部 ImageHub 功能共享每个用户每日 3 次免费任务额度，但 Workspace 在额度用完后缺少明确弹窗，用户无法立即理解任务不能继续提交的原因以及何时可以再次免费使用。
+- 修改要求：同一用户当天已经消耗完共享的 3 次免费任务额度后，在 Workspace 再次点击任一任务提交按钮时阻止提交并即时挂载模态弹窗。弹窗标题固定为 `Daily free limit reached`，正文固定为 `You’ve used your 3 free tasks for today. Please come back tomorrow.`，主按钮固定为 `Got it`，同时提供可访问名称为 `Close` 的关闭按钮。弹窗只能在用户尝试发起超出额度的任务时出现；第三个符合现有额度扣减规则的任务必须正常提交并完整显示结果，不得在结果上自动覆盖弹窗。提交前读取的剩余额度为 0 时直接显示弹窗；如果本地状态尚未更新但服务端返回当日免费额度已用完，也必须显示同一弹窗。超额尝试不得创建任务、上传新的任务数据、调用生成或编辑服务、加入队列、重复扣减额度或清空用户已经填写的提示词、选择的工具、模型、参数和已添加的参考图片。关闭弹窗后保留当前 Workspace 输入状态；用户当天再次尝试提交时重新显示同一提示，现有每日重置生效后下一次任务恢复正常提交。
+- 验收标准：使用当天剩余 1 次免费额度的测试用户提交任务时，第三个免费任务正常创建、处理并显示结果；随后在首页集合 Workspace 和完整 Workspace 分别尝试第四个任务，均不创建任务并显示指定弹窗，标题、正文和 `Got it` 文案逐字一致。直接以剩余 0 次状态进入 Workspace 时不自动打断浏览，只有点击提交后才显示；模拟提交前额度状态过期并由服务端返回限额时也显示同一弹窗。超额尝试前后，提示词、工具、模型、参数和参考图片保持不变，额度计数不再增加。弹窗在 `1440px`、`1280px`、`1024px` 和 `390px` 视口完整可见，没有溢出；打开后焦点进入弹窗并停留其中，读屏识别为模态对话框并朗读标题与正文，`Got it`、`Close` 和 Escape 均可关闭，关闭后焦点返回原提交按钮。按现有每日重置规则进入下一日后，首次任务不再出现限额弹窗并可正常提交。
+- 不要修改：不要改变每日 3 次额度、跨工具共享方式、用户识别、额度扣减条件、每日重置时区、并发任务限制、登录要求、免费任务保存与删除规则或无水印规则；不要在第三个任务完成时自动弹窗，不要跳转到定价、支付、登录或外部页面，不要新增购买、升级、倒计时、具体重置时刻或营销文案；不要用浏览器提示框替代站内模态弹窗，不要让限额弹窗覆盖其他非额度错误或改变已有错误处理优先级。
+
 ### 统一公开页面的尾斜杠 URL 并实施 301 跳转
 
 - 优先级：`P1`
@@ -143,7 +152,7 @@ updated_at: "2026-09-07"
 
 - 优先级：`P1`
 - 页面或界面：`https://imagehub.ai/changelog/`
-- 当前问题与线上证据：当前 Changelog 已包含上一批次记录，但尚未记录本批次统一导航与 Workspace 入口、交互式效果对比、法律页面链接、全站免费额度说明、图片加载和搜索摘要等用户可见改进。
-- 修改要求：在本文件上述任务全部实际发布后，向现有 Changelog 顶部新增一条使用真实发布日期的英文记录：`Updated navigation and Workspace access across ImageHub, added smoother interactive before-and-after previews to Blur Background and AI Photo Editor, fixed legal-page links, clarified the shared allowance of three free tasks per user each day, and improved image loading and search previews across tool pages.` 保留全部既有记录及其日期，并让最新记录排在最前。
+- 当前问题与线上证据：当前 Changelog 已包含上一批次记录，但尚未记录本批次统一导航与 Workspace 入口、交互式效果对比、法律页面链接、全站免费额度说明、额度用完提示、图片加载和搜索摘要等用户可见改进。
+- 修改要求：在本文件上述任务全部实际发布后，向现有 Changelog 顶部新增一条使用真实发布日期的英文记录：`Updated navigation and Workspace access across ImageHub, added smoother interactive before-and-after previews to Blur Background and AI Photo Editor, fixed legal-page links, clarified the shared allowance of three free tasks per user each day, added a clear Workspace notice when the daily free allowance is used, and improved image loading and search previews across tool pages.` 保留全部既有记录及其日期，并让最新记录排在最前。
 - 验收标准：`https://imagehub.ai/changelog/` 返回 200；最新记录日期与实际上线日期一致，正文逐字匹配指定英文文案；既有历史记录、Title、Meta Description、Canonical、H1、页脚链接和站点地图均保持正常。
 - 不要修改：不要记录代码文件、组件、架构、仓库、分支、提交、基础设施、服务商配置、成本、密钥、安全敏感实现、客户数据、内部指标、AI 提示词或内部工作流；如果本文件上述任务没有全部实际上线，不要提前发布该记录。
