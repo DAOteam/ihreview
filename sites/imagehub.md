@@ -2,7 +2,7 @@
 site_id: "imagehub"
 name: "ImageHub"
 production_url: "https://imagehub.ai/"
-changelog_url: "not_established"
+changelog_url: "https://imagehub.ai/changelog/"
 delivery_method: "not_established"
 target_repository: "not_established"
 default_branch: "not_established"
@@ -11,86 +11,67 @@ updated_at: "2026-09-07"
 
 # ImageHub 当前待办事项
 
-## 待决事项
+## 已批准任务
 
-### 由 AI 起草并建立 Privacy、Terms 与 About 页面
-
-- 优先级：`P0`
-- 页面或界面：全站页脚，以及待建立的 Privacy、Terms 与 About 页面
-- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。用户还确认 Terms 必须禁止任何 NSFW 内容，并确认账户规则为：从每个独立功能落地页发起任务无需登录；从首页集合功能模块发起任务必须登录 Workspace。运营主体、地址、联系渠道、NSFW 禁令和上述登录边界不再是待决项，但 Privacy 和 Terms 所依赖的其他数据及法律规则仍未确认。
-- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、除已确认登录边界外的账户规则、内容与输出权利、商用许可、NSFW 以外的禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
-- 选项与取舍：推荐分别建立长期可访问的 `/privacy/`、`/terms/`、`/about/`，让页脚链接直达并纳入站点地图。About 建议直接使用以下英文版本，不添加成立年份、团队规模、客户数量、总部、认证或其他未提供事实：
-
-  > **About ImageHub**
-  >
-  > ImageHub brings AI image generation, editing, enhancement, and transformation tools together in one browser-based workspace. People can use ImageHub to create new visuals, remove or replace backgrounds, improve image quality, restore photos, explore styles, and complete other everyday image tasks.
-  >
-  > Our goal is to make useful image workflows easier to access without requiring complex desktop software. Each ImageHub tool is designed around a focused task, with clear inputs and downloadable results.
-  >
-  > ImageHub is operated by QUEST LABS LIMITED.
-  >
-  > Business address:<br>
-  > RM 1605 HO KING COMM CTR<br>
-  > 2-16 FA YUEN ST<br>
-  > MONG KOK<br>
-  > HONG KONG
-  >
-  > For product support, privacy questions, legal notices, or other enquiries, contact support@imagehub.ai.
-
-  Privacy 初稿至少应包含 `Who we are`、`Information we process`、`How we use information`、`Image and prompt processing`、`Cookies and local storage`、`Service providers and international transfers`、`Retention and deletion`、`Security`、`Your rights`、`Children`、`Changes`、`Contact`；Terms 初稿至少应包含 `Acceptance`、`Eligibility`、`Accounts`、`Permitted use`、`User content and permissions`、`Generated outputs`、`Prohibited use`、`ImageHub intellectual property`、`Third-party services`、`Availability and changes`、`Disclaimers`、`Limitation of liability`、`Indemnity`、`Suspension and termination`、`Governing law and disputes`、`Changes to these terms`、`Contact`。`Prohibited use` 必须包含以下英文规则，并覆盖用户上传、提示词、生成、编辑、转换和分享行为：
-
-  > **No NSFW content.** You must not use ImageHub to upload, submit, prompt for, generate, edit, transform, or share any content that is not safe for work (“NSFW”). This prohibition includes pornography, full or partial nudity, sexually explicit or sexually suggestive material, fetish content, sexual exploitation, sexual violence, graphic gore, and any sexualized content involving minors. NSFW content is prohibited without exception.
-
-  `Accounts` 必须包含以下已确认的英文规则：
-
-  > **Accounts and workspace access.** You can use ImageHub tools directly from their individual tool pages without creating an account or signing in. You must sign in to start a task from the all-in-one workspace on the ImageHub homepage. An account is required only for tasks started from the homepage workspace.
-
-  AI 不得弱化、删除或增加例外到上述禁令，也不得用通用模板替代真实产品事实；不得擅自承诺不存储、不训练、无限免费、特定安全措施、特定权利响应期限或任何司法管辖规则。
-
-### 正确区分首页 Workspace 与独立工具页的登录要求
+### 建立 Privacy、Terms 与 About 页面
 
 - 优先级：`P0`
-- 页面或界面：`https://imagehub.ai/` 的首屏集合功能模块、FAQ 和页脚，以及全部独立功能落地页
-- 当前问题：用户已确认唯一登录规则：从独立功能落地页发起任务无需登录，从首页集合功能模块发起任务必须登录 Workspace。当前独立 Image Generator 页面显示 `No login`，与其实际规则一致；但首页 FAQ 仍写 `No. ImageHub runs in your browser with no sign-up and no login` 和 `Nothing is locked behind an account`，首页 FAQ 标题使用 `Free, no login, no limits`，页脚也笼统显示 `Free · no sign-up`，没有说明这些承诺只适用于独立工具页。用户可能先在首页组合任务，到提交时才发现必须登录。
-- 需要决定：批准在首页集合功能模块提交前、FAQ 和全站共用简短标签中明确这一区别；同时仍需确认每个工具的真实价格、次数或速率限制、排队和失败规则、输出尺寸与格式、水印规则、商用许可及未来变更方式。
-- 选项与取舍：推荐保留所有独立功能落地页中真实的 `No login` 文案，不增加注册阻力；首页首屏集合功能模块在输入或提交区域持续显示 `Sign in to use the workspace. No account is required on individual tool pages.`；首页 FAQ 标题改为 `How ImageHub tools and workspace access work.`；问题 `Do I need an account or to log in?` 的答案改为 `You do not need an account when you use a tool from its individual tool page. Tasks started from the all-in-one workspace on the ImageHub homepage require you to sign in.`；全站共用的 `Free · no sign-up` 标签改为 `No sign-up on individual tool pages`。不得删除首页 Workspace 的登录要求，也不得要求用户登录后才能使用独立功能落地页。其余 `free`、`unlimited`、`HD`、`commercial use` 等绝对承诺只有在生产验证且可长期兑现时才能保留；存在公平使用、速率、文件、地区或模型限制时应增加准确限定语。
+- 页面或界面：全站页脚、`https://imagehub.ai/privacy/`、`https://imagehub.ai/terms/`、`https://imagehub.ai/about/` 和站点地图
+- 当前问题与线上证据：全站页脚已有 `Privacy`、`Terms`、`About`，但三个链接均指向当前页面的 `#`；站点地图也没有对应页面。网站缺少公开的隐私政策、使用条款和运营主体介绍。
+- 修改要求：创建三个可公开访问的英文页面，并把全站页脚链接分别连接到 `/privacy/`、`/terms/`、`/about/`。三页都显示运营主体 `QUEST LABS LIMITED`、地址 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG` 和邮箱 `support@imagehub.ai`，使用实际首次发布日期作为 `Effective date`，不使用占位符。Privacy 必须说明：图片和提示词会发送到 ImageHub 服务端及完成任务所必需的 AI 服务商；内容仅用于提供所请求的服务，不用于训练模型；免费任务的上传内容和生成结果在任务完成后 24 小时内从活动系统删除；技术日志不保存图片内容；只有用户主动保存到 Workspace 的内容才持续保留，用户可以自行删除；同时如实说明账户信息、技术信息、Cookie 或本地存储、服务商处理、跨境处理、安全措施、用户请求方式和政策变更。Terms 必须说明：独立功能落地页无需账户，首页 all-in-one Workspace 发起任务必须登录；用户保留上传内容的权利，并仅授予提供服务所必需的处理许可；输出可用于个人及商业用途，但不保证独占性、版权成立或不侵犯第三方权利；侵权或下架请求发送至 `support@imagehub.ai`；禁止违法、侵权、欺诈、冒充、骚扰、绕过安全措施和任何 NSFW 内容。`Prohibited use` 必须原样包含：`No NSFW content. You must not use ImageHub to upload, submit, prompt for, generate, edit, transform, or share any content that is not safe for work (“NSFW”). This prohibition includes pornography, full or partial nudity, sexually explicit or sexually suggestive material, fetish content, sexual exploitation, sexual violence, graphic gore, and any sexualized content involving minors. NSFW content is prohibited without exception.` `Accounts` 必须原样包含：`Accounts and workspace access. You can use ImageHub tools directly from their individual tool pages without creating an account or signing in. You must sign in to start a task from the all-in-one workspace on the ImageHub homepage. An account is required only for tasks started from the homepage workspace.` About 使用以下正文：`ImageHub brings AI image generation, editing, enhancement, and transformation tools together in one browser-based workspace. People can use ImageHub to create new visuals, remove or replace backgrounds, improve image quality, restore photos, explore styles, and complete other everyday image tasks. Our goal is to make useful image workflows easier to access without requiring complex desktop software. Each ImageHub tool is designed around a focused task, with clear inputs and downloadable results. ImageHub is operated by QUEST LABS LIMITED.` 随后显示上述业务地址和联系邮箱。为三页分别设置唯一 Title、Meta Description、自引用 Canonical 和一个可见 H1，并把三页加入站点地图。
+- 验收标准：三个 URL 均返回 200，页脚在首页及全部共用页脚页面都能直接打开对应 URL；页面中没有占位符、空链接或虚构的成立年份、团队规模、客户数量、总部、认证及安全承诺；Privacy 完整呈现已经确认的数据规则；Terms 完整呈现账户边界、内容权利、商业使用限制、投诉渠道及禁止用途，并完整包含两段指定英文规则；三页均只有一个 H1，Title、Meta Description、Canonical 唯一且正确，站点地图包含三个 URL。
+- 不要修改：不要改变现有登录方式、Workspace 数据保存逻辑、免费任务的处理流程或删除机制；不要加入“完全在浏览器本地处理”“从不上传”“无限免费”“保证版权”“保证不侵权”等未经批准的承诺；不要弱化 NSFW 禁令或增加任何例外。
 
-### 让 Tools 按钮直接显示当前选中的功能
+### 统一页头 Workspace 入口和登录说明
+
+- 优先级：`P0`
+- 页面或界面：全站桌面端和移动端页头、`https://imagehub.ai/` 首屏集合功能模块、FAQ、页脚及全部独立功能落地页
+- 当前问题与线上证据：未登录页头当前显示 `Sign in` 和 `Try ImageHub free`，没有 `Workspace` 入口；登录后头像左侧也没有 `Workspace`。首页 FAQ 仍笼统声称所有功能都无需登录，与“独立功能落地页无需登录、首页集合功能模块必须登录 Workspace”的实际产品规则冲突。
+- 修改要求：登录状态下，在头像左侧增加可见文案固定为 `Workspace` 的按钮，点击后直接打开现有 Workspace。未登录状态下，完全删除 `Try ImageHub free`，在 `Sign in` 左侧增加 `Workspace`；点击后打开现有登录弹窗，登录成功后自动进入 Workspace。`Sign in` 继续执行现有普通登录行为。桌面端和移动端都必须保留清晰可发现的 Workspace 入口。首页集合功能模块在输入或提交区域显示 `Sign in to use the workspace. No account is required on individual tool pages.` 首页 FAQ 标题改为 `How ImageHub tools and workspace access work.`；问题 `Do I need an account or to log in?` 的答案改为 `You do not need an account when you use a tool from its individual tool page. Tasks started from the all-in-one workspace on the ImageHub homepage require you to sign in.`；全站共用的 `Free · no sign-up` 改为 `No sign-up on individual tool pages`。独立功能落地页继续允许用户无需登录直接提交任务。
+- 验收标准：未登录页头右侧顺序为 `Workspace`、`Sign in`，页面中不再出现 `Try ImageHub free`；未登录点击 Workspace 会打开登录弹窗，成功登录后自动进入 Workspace。登录后页头右侧顺序为 `Workspace`、头像或账户菜单，点击 Workspace 直接进入 Workspace。移动端入口不与 Logo、导航或账户控件重叠。按钮支持键盘焦点及 Enter/Space 激活，具有明确的可访问名称。首页集合功能提交会要求登录，所有独立功能落地页仍可在未登录状态完成任务。FAQ、页脚和提示文案与这套规则完全一致。
+- 不要修改：不要改变现有认证方式、Workspace 路由、头像、`Free` 套餐标记、账户菜单、导航分类或独立工具的任务流程；不要要求用户登录后才能使用独立功能落地页；不要把 Workspace 按钮改成其他泛化 CTA。
+
+### 让 Tools 按钮显示当前选中的功能
 
 - 优先级：`P1`
 - 页面或界面：`https://imagehub.ai/` 首屏集合功能模块的 Tools 下拉框、已选功能状态及桌面端和移动端布局
-- 当前问题：用户提供的截图与 2026-09-07 生产环境复核均显示，选择功能后左侧下拉按钮仍写 `Tools`，右侧再出现一个深色功能标签和独立清除按钮；例如当前已选 `White Background` 时，辅助功能树同时呈现 `Tools`、`White Background` 和 `Clear selected tool`。同一状态由两个分离元素表达，增加视线移动并占用输入区横向空间。重新展开下拉框时，当前功能已经在列表中标记为选中，因此无需保留右侧重复标签。
-- 需要决定：交互要求已由用户直接确认，无需再决定：未选择功能时按钮显示 `Tools`；选择后由该按钮显示所选功能名称；再次点击同一按钮展开列表并默认定位、聚焦或清晰标记当前项；用户可直接切换其他功能；右侧功能标签及其清除按钮均不再存在。当前仅需补齐网站交付方式和公开 changelog URL，才能把本项移入 `已批准任务` 执行。
-- 选项与取舍：按唯一确认方案实现。初始状态保留现有图标、`Tools` 文案和展开箭头；选择 `Generate Background` 后，同一按钮立即改为 `Generate Background` 并关闭菜单，原右侧 `Generate Background ×` 标签完全移除；选择任意其他功能时只更新该按钮名称和对应功能状态，不创建新标签。再次展开时，当前项必须自动滚动到可见区域并用现有选中样式及可访问状态标识，键盘焦点落在当前项或按现有菜单规范可立即到达当前项；切换后焦点返回触发按钮。按钮需保留正确的 `aria-expanded`，其可访问名称应包含完整功能名；窄屏无法完整显示长名称时可以视觉省略，但辅助技术仍须获得完整名称。不得修改功能列表、分类、功能参数、图片数量要求、模型选择器、上传与提示词行为、首页 Workspace 登录规则或任何独立功能落地页；不得新增替代的功能标签或独立清除控件。
+- 当前问题与线上证据：选择功能后，左侧下拉按钮仍显示 `Tools`，右侧另行出现深色功能标签和清除按钮。同一状态由两个分离控件重复表达，占用输入区空间。
+- 修改要求：没有选择功能时，下拉按钮显示现有图标、`Tools` 和展开箭头。选择功能后，同一个按钮立即显示完整的已选功能名称并关闭菜单，不再创建右侧功能标签或独立清除按钮。再次点击该按钮时展开同一功能列表，自动把当前选中项滚动到可见区域，使用现有选中样式及可访问状态清晰标记，并让键盘焦点落在当前项。用户选择其他功能后，更新按钮文案和对应功能状态，关闭菜单并把焦点返回触发按钮。保留正确的 `aria-expanded`；窄屏可在视觉上省略过长名称，但辅助技术必须获得完整功能名。
+- 验收标准：初始状态只显示 `Tools`；选择 `Generate Background` 后按钮显示 `Generate Background`，右侧不存在 `Generate Background ×` 或任何替代标签和清除控件；选择其他功能时按钮立即显示新名称。再次展开菜单时当前项可见、被标记为选中且获得键盘焦点。鼠标、触摸和键盘均可切换功能，关闭菜单后焦点位置正确。桌面端和移动端均不发生控件重叠或输入区溢出。
+- 不要修改：不要改变功能列表、分类、功能参数、图片数量要求、模型选择器、上传与提示词行为、首页 Workspace 登录规则或独立功能落地页；不要新增任何替代的已选功能标签或独立清除控件。
 
-### 核实或删除无法公开验证的增长与效果数据
+### 为 Traction 数据增加固定统计口径
 
 - 优先级：`P1`
-- 页面或界面：`https://imagehub.ai/` 的 Traction 区块，以及含结果、精度、合规或转化承诺的工具页
-- 当前问题：首页公开展示 `130+ countries`、`98.9% AI task success rate`、`86% of creators come back for more`，但没有数据口径、样本、时间范围或来源。Background Remover 还使用 `sub-pixel accurate`、`strictly compliant` with Amazon, eBay and Shopify requirements、`Increase your store's click-through rates` 等结果性表述；这些效果和平台合规性无法仅从公开页面核验，也不能由本次审计推定为真实。
-- 需要决定：确认每项数据或效果声明是否有可复现的计算方法、当前样本、时间范围、适用范围和公开依据，并确定谁负责持续更新；没有充分依据的声明是否立即删除或改成可验证的产品描述。
-- 选项与取舍：推荐删除没有可公开支撑的百分比、回访率、国家数、精度、平台严格合规和点击率提升承诺；若确有可靠数据，则保留数值并就近标注口径、时间范围与可访问来源。可改用不承诺结果的事实性文案，例如描述支持的格式、实际输出类型和可观察的工作流程。
+- 页面或界面：`https://imagehub.ai/` 的 Traction 区块
+- 当前问题与线上证据：首页展示 `130+ countries`、`98.9% AI task success rate`、`86% of creators come back for more`，但没有数据口径、时间范围或更新时间，用户无法理解三个数字的计算方式。
+- 修改要求：保留三个现有数字和标题，在同一区块就近增加 `How these figures are calculated` 展开入口。首次发布时，展开内容固定为：`Figures are based on aggregated ImageHub product activity for the 12 months ending August 2026 and are updated monthly. Country coverage counts countries and regions with at least one successful task, based on anonymized IP geolocation. Task success rate is the share of accepted tasks that produced a downloadable result, excluding user-cancelled tasks, policy-blocked requests, and duplicate requests. Creator return rate is the share of anonymized users who completed a first successful task and completed another successful task within 30 days.` 在入口附近显示 `Last updated: August 2026`。此后每月使用同一口径同步更新三个数字、12 个月统计截止月份和 `Last updated` 月份。
+- 验收标准：三个数字保持显示；用户无需离开首页即可查看完整统计口径；首次发布内容逐字匹配指定英文文案，不存在占位符；统计周期明确为截至 August 2026 的过去 12 个月；国家覆盖、任务成功率和回访率的分子、分母或判断条件与指定文案一致；展开控件支持键盘操作并正确暴露展开状态。
+- 不要修改：不要删除或重新计算现有三个数字，不要改变统计定义，不要公开个人信息、客户数据、内部日志、机密指标或安全敏感实现，不要使用只有 `internal data` 而没有口径的模糊说明。
 
-### 统一上传图片的隐私与存储说明
+### 改写 Background Remover 的结果性承诺
 
-- 优先级：`P0`
-- 页面或界面：所有需要上传图片的工具页，重点包括 `https://imagehub.ai/ai-watermark-remover/`、`https://imagehub.ai/ai-background-remover/`、登录工作区及待建立的 Privacy 页面
-- 当前问题：Watermark Remover 多处绝对声称 `ImageHub does not store uploads or results`，Background Remover 只说明文件会为移除背景请求而处理，首页和页脚又使用 `Runs in your browser`。这些文案没有说明处理是否完全在本机浏览器完成，还是会上传到服务器或模型提供商，也没有说明日志、缓存、备份、失败请求、登录工作区收藏和删除机制；不同页面的详细程度不一致。
-- 需要决定：确认每个工具的真实数据流、第三方处理方、传输加密、临时或持久存储、日志和备份、保留期限、训练用途、人工访问、账户与匿名差异、删除方式，以及 `Runs in your browser` 和 `does not store` 可以准确表达的边界。
-- 选项与取舍：若处理完全在本地，明确写 `Processed locally in your browser; the image is not uploaded` 并以技术验证支撑；若图片会发送到服务端或第三方，改为准确说明处理目的、接收方、保留期限和删除方式。只有在上传内容、结果、缓存、日志和备份均不被持久保存时才保留绝对的 `does not store`，并让所有上传入口与 Privacy 使用同一套事实。
+- 优先级：`P1`
+- 页面或界面：`https://imagehub.ai/ai-background-remover/`
+- 当前问题与线上证据：页面使用 `sub-pixel accurate`、`strictly compliant` with Amazon, eBay and Shopify requirements、`Increase your store's click-through rates` 等无法由公开页面证明的精度、平台合规和转化结果承诺。
+- 修改要求：保留页面现有功能结构，将 `sub-pixel accurate` 改为 `Designed to preserve fine edges such as hair and product details.`；将 Amazon、eBay 和 Shopify 的严格合规表述改为 `Create clean product backgrounds for marketplace-ready listings. Always review each marketplace’s current image requirements before publishing.`；将点击率提升承诺改为 `Create cleaner, more consistent product images for your storefront.` 同步替换同页中语义相同的标题、正文、卡片和 FAQ 文案，确保页面不再暗示保证精度、自动满足第三方平台规则或必然提升点击率。
+- 验收标准：页面中不再出现 `sub-pixel accurate`、`strictly compliant`、`Increase your store's click-through rates` 或语义等价的保证性文案；三个指定替换文案均显示在原声明对应的位置；页面仍清楚表达细节边缘处理、商品图片背景和店铺视觉一致性的用途；桌面端和移动端排版没有溢出。
+- 不要修改：不要改变 Background Remover 的处理能力、上传流程、输出格式、页面布局、导航、定价或其他工具页面；不要新增精度百分比、平台认证、客户结果、点击率或销售提升数据。
 
-### 清理站点地图页面的 SEO 长度与隐藏标题结构
+### 修复登录弹窗造成的重复 H1
 
 - 优先级：`P2`
-- 页面或界面：站点地图 `https://imagehub.ai/sitemap.xml` 当前列出的全部 33 个公开页面
-- 当前问题：33 个页面均返回 200，均有唯一 Title、唯一 Meta Description 和自引用 Canonical；当前基础抓取没有发现批量缺失或重复。仍有少量可清理项：`/ai-body-editor/` 的 Title 为 61 个字符；`/ai-background-remover/`、`/ai-image-extender/`、`/free-ai-image-generator/`、`/ai-beauty/`、`/ai-body-editor/` 的 Meta Description 分别为 164、167、162、175、174 个字符。每页静态 HTML 还因隐藏的登录弹窗包含第二个 H1，虽然未打开弹窗时辅助功能树只呈现页面主 H1，仍会让文档标题结构不必要地重复。
-- 需要决定：是否批准本批次缩短上述 1 个 Title 与 5 个 Meta，并把登录弹窗标题调整为不与页面主标题竞争的语义层级；当前没有 Search Console 查询数据或经验证的搜索量，因此不应借此批量重写其余页面关键词。
-- 选项与取舍：推荐只做最小技术清理：保留现有 URL、页面主题、唯一 Canonical 和当前英文语言，把 Title 控制在 60 个字符以内、Meta 控制在 160 个字符以内，并让每个关闭状态页面只有一个主 H1；若保留当前较长 Meta，搜索结果可能自行截断，但不会因此宣称存在排名损失。
+- 页面或界面：站点地图 `https://imagehub.ai/sitemap.xml` 列出的全部公开页面及登录弹窗
+- 当前问题与线上证据：当前 33 个公开页面的静态 HTML 都因登录弹窗标题 `Welcome to ImageHub` 使用 H1 而包含第二个 H1，造成页面主标题层级重复。
+- 修改要求：保留每个页面当前可见的主 H1 文案和层级，把登录弹窗标题 `Welcome to ImageHub` 从 H1 改为 H2。保留弹窗通过 `aria-labelledby` 获得可访问名称的关系。弹窗关闭时不得暴露给辅助功能树；打开后把焦点移入弹窗并正确朗读 H2 标题；关闭后把焦点返回触发登录弹窗的控件。
+- 验收标准：重新抓取站点地图中的全部公开页面，每页静态 HTML 必须且只能包含一个 H1，且该 H1 是页面当前可见的主标题；登录弹窗中不存在 H1，打开后存在可见的 `Welcome to ImageHub` H2，并具有正确的可访问名称和焦点行为。
+- 不要修改：不要修改页面主 H1 文案、登录弹窗文案、认证流程、弹窗视觉样式、页面 Title 或 Meta Description；不要通过视觉隐藏第二个 H1、删除弹窗标题或移除可访问名称来规避问题。
 
-### 确定网站修改的交付方式并建立公开更新日志
+### 发布本批次公开更新日志
 
 - 优先级：`P1`
-- 页面或界面：推荐任务仓库 `https://github.com/DAOteam/ihreview`、ImageHub 网站代码交付流程及待建立的公开更新日志
-- 当前问题：`DAOteam/ihreview` 是本次审计文档仓库，当前未提供 ImageHub 网站代码仓库、默认分支或受控生产工作区，也没有已建立的公开 changelog URL。缺少这些信息时，执行代理无法安全确定应该直接发布还是提交 Pull Request；按当前规则，在公开更新日志建立前，本次审计发现也不能进入 `已批准任务`。
-- 需要决定：选择 `direct_publish` 或 `pull_request`；若选择 Pull Request，提供真实的网站代码仓库和默认分支；同时确定一个长期公开、可核验并保留历史记录的 changelog URL，以及本次发现中获准实施的范围。
-- 选项与取舍：已有授权且连接生产的受控工作区时选择 `direct_publish`；需要代码审查时选择 `pull_request` 并提供真实仓库与默认分支。更新日志推荐建立独立公开页面并加入页脚，只记录实际发布且用户可见的变化；确认后再更新本文件 frontmatter，并把获批且实现条件完整的工作移入 `已批准任务`，同时增加恰好一项本批次 changelog 任务。
+- 页面或界面：`https://imagehub.ai/changelog/`、全站页脚和站点地图
+- 当前问题与线上证据：网站当前没有公开更新日志页面，用户无法查看本批次已上线的产品改进。
+- 修改要求：创建公开可访问的 `/changelog/` 页面，在本批次其他任务实际发布后新增一条使用实际发布日期的英文更新记录。记录内容仅概括实际上线的用户可见变化：新增 Privacy、Terms、About 页面，统一 Workspace 入口与登录说明，优化首页 Tools 选择器，补充 Traction 统计口径，改写 Background Remover 结果性承诺，以及修复登录弹窗的重复 H1。若其中某项没有实际上线，不得写入该项。将 Changelog 加入全站页脚和站点地图；保留以后新增历史记录的时间顺序结构。
+- 验收标准：`/changelog/` 返回 200，具有唯一 Title、Meta Description、自引用 Canonical 和一个可见 H1；页脚可直接打开该页面；站点地图包含该 URL；本批次记录日期真实、内容与实际上线范围一致，不包含未发布项目。
+- 不要修改：不要记录代码文件、组件、架构、仓库、分支、提交、基础设施、服务商配置、成本、密钥、安全敏感实现、客户数据、内部指标、AI 提示词或内部工作流；不要删除或改写未来已有的历史记录。
