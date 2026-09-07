@@ -13,13 +13,31 @@ updated_at: "2026-09-07"
 
 ## 待决事项
 
-### 建立真实可访问的 Privacy、Terms 与 About 页面
+### 由 AI 起草并建立 Privacy、Terms 与 About 页面
 
 - 优先级：`P0`
 - 页面或界面：全站页脚，以及待建立的 Privacy、Terms 与 About 页面
-- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含隐私政策、服务条款或 About 页面。与此同时，首页声称结果可商用，Watermark Remover 声称不存储上传图片或生成结果，登录弹窗又称登录可保护用户工作区，访客无法核对数据处理、内容权利、账户规则或运营主体。
-- 需要决定：由业务负责人和合格法律顾问确认运营主体、适用法律、用户上传与生成内容的权利、允许和禁止的用途、投诉或下架流程、账户条款、实际处理方、传输与存储位置、保留和删除规则、Cookie/本地存储规则及联系渠道，然后批准对应公开页面。
-- 选项与取舍：推荐分别建立长期可访问的 `/privacy/`、`/terms/`、`/about/`，让页脚链接直达并纳入站点地图；Privacy 只写真实的数据流程，Terms 明确内容许可、商用范围、责任限制和滥用规则，About 提供可核验的产品与运营主体信息。若完整法律文本尚未审定，应先停止未加限定的商用、无存储等绝对承诺，而不是继续保留无效链接。
+- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。运营主体、地址和联系渠道不再是待决项，但 Privacy 和 Terms 所依赖的数据及法律规则仍未确认。
+- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、账户规则、内容与输出权利、商用许可、禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
+- 选项与取舍：推荐分别建立长期可访问的 `/privacy/`、`/terms/`、`/about/`，让页脚链接直达并纳入站点地图。About 建议直接使用以下英文版本，不添加成立年份、团队规模、客户数量、总部、认证或其他未提供事实：
+
+  > **About ImageHub**
+  >
+  > ImageHub brings AI image generation, editing, enhancement, and transformation tools together in one browser-based workspace. People can use ImageHub to create new visuals, remove or replace backgrounds, improve image quality, restore photos, explore styles, and complete other everyday image tasks.
+  >
+  > Our goal is to make useful image workflows easier to access without requiring complex desktop software. Each ImageHub tool is designed around a focused task, with clear inputs and downloadable results.
+  >
+  > ImageHub is operated by QUEST LABS LIMITED.
+  >
+  > Business address:<br>
+  > RM 1605 HO KING COMM CTR<br>
+  > 2-16 FA YUEN ST<br>
+  > MONG KOK<br>
+  > HONG KONG
+  >
+  > For product support, privacy questions, legal notices, or other enquiries, contact support@imagehub.ai.
+
+  Privacy 初稿至少应包含 `Who we are`、`Information we process`、`How we use information`、`Image and prompt processing`、`Cookies and local storage`、`Service providers and international transfers`、`Retention and deletion`、`Security`、`Your rights`、`Children`、`Changes`、`Contact`；Terms 初稿至少应包含 `Acceptance`、`Eligibility`、`Accounts`、`Permitted use`、`User content and permissions`、`Generated outputs`、`Prohibited use`、`ImageHub intellectual property`、`Third-party services`、`Availability and changes`、`Disclaimers`、`Limitation of liability`、`Indemnity`、`Suspension and termination`、`Governing law and disputes`、`Changes to these terms`、`Contact`。AI 不得用通用模板替代真实产品事实，不得擅自承诺不存储、不训练、无限免费、特定安全措施、特定权利响应期限或任何司法管辖规则。
 
 ### 统一免费、登录、次数、输出与商用承诺
 
