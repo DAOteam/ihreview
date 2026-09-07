@@ -55,6 +55,14 @@ updated_at: "2026-09-07"
 - 需要决定：批准在首页集合功能模块提交前、FAQ 和全站共用简短标签中明确这一区别；同时仍需确认每个工具的真实价格、次数或速率限制、排队和失败规则、输出尺寸与格式、水印规则、商用许可及未来变更方式。
 - 选项与取舍：推荐保留所有独立功能落地页中真实的 `No login` 文案，不增加注册阻力；首页首屏集合功能模块在输入或提交区域持续显示 `Sign in to use the workspace. No account is required on individual tool pages.`；首页 FAQ 标题改为 `How ImageHub tools and workspace access work.`；问题 `Do I need an account or to log in?` 的答案改为 `You do not need an account when you use a tool from its individual tool page. Tasks started from the all-in-one workspace on the ImageHub homepage require you to sign in.`；全站共用的 `Free · no sign-up` 标签改为 `No sign-up on individual tool pages`。不得删除首页 Workspace 的登录要求，也不得要求用户登录后才能使用独立功能落地页。其余 `free`、`unlimited`、`HD`、`commercial use` 等绝对承诺只有在生产验证且可长期兑现时才能保留；存在公平使用、速率、文件、地区或模型限制时应增加准确限定语。
 
+### 让 Tools 按钮直接显示当前选中的功能
+
+- 优先级：`P1`
+- 页面或界面：`https://imagehub.ai/` 首屏集合功能模块的 Tools 下拉框、已选功能状态及桌面端和移动端布局
+- 当前问题：用户提供的截图与 2026-09-07 生产环境复核均显示，选择功能后左侧下拉按钮仍写 `Tools`，右侧再出现一个深色功能标签和独立清除按钮；例如当前已选 `White Background` 时，辅助功能树同时呈现 `Tools`、`White Background` 和 `Clear selected tool`。同一状态由两个分离元素表达，增加视线移动并占用输入区横向空间。重新展开下拉框时，当前功能已经在列表中标记为选中，因此无需保留右侧重复标签。
+- 需要决定：交互要求已由用户直接确认，无需再决定：未选择功能时按钮显示 `Tools`；选择后由该按钮显示所选功能名称；再次点击同一按钮展开列表并默认定位、聚焦或清晰标记当前项；用户可直接切换其他功能；右侧功能标签及其清除按钮均不再存在。当前仅需补齐网站交付方式和公开 changelog URL，才能把本项移入 `已批准任务` 执行。
+- 选项与取舍：按唯一确认方案实现。初始状态保留现有图标、`Tools` 文案和展开箭头；选择 `Generate Background` 后，同一按钮立即改为 `Generate Background` 并关闭菜单，原右侧 `Generate Background ×` 标签完全移除；选择任意其他功能时只更新该按钮名称和对应功能状态，不创建新标签。再次展开时，当前项必须自动滚动到可见区域并用现有选中样式及可访问状态标识，键盘焦点落在当前项或按现有菜单规范可立即到达当前项；切换后焦点返回触发按钮。按钮需保留正确的 `aria-expanded`，其可访问名称应包含完整功能名；窄屏无法完整显示长名称时可以视觉省略，但辅助技术仍须获得完整名称。不得修改功能列表、分类、功能参数、图片数量要求、模型选择器、上传与提示词行为、首页 Workspace 登录规则或任何独立功能落地页；不得新增替代的功能标签或独立清除控件。
+
 ### 核实或删除无法公开验证的增长与效果数据
 
 - 优先级：`P1`
