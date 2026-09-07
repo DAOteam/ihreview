@@ -152,7 +152,7 @@ updated_at: "2026-09-07"
 
 - 优先级：`P1`
 - 页面或界面：`https://imagehub.ai/changelog/`
-- 当前问题与线上证据：当前 Changelog 已包含上一批次记录，但尚未记录本批次统一导航与 Workspace 入口、交互式效果对比、法律页面链接、全站免费额度说明、额度用完提示、图片加载和搜索摘要等用户可见改进。
-- 修改要求：在本文件上述任务全部实际发布后，向现有 Changelog 顶部新增一条使用真实发布日期的英文记录：`Updated navigation and Workspace access across ImageHub, added smoother interactive before-and-after previews to Blur Background and AI Photo Editor, fixed legal-page links, clarified the shared allowance of three free tasks per user each day, added a clear Workspace notice when the daily free allowance is used, and improved image loading and search previews across tool pages.` 保留全部既有记录及其日期，并让最新记录排在最前。
+- 当前问题与线上证据：当前 Changelog 已包含上一批次记录，但尚未记录本批次对用户影响较大的导航与 Workspace 入口、交互式效果对比、每日免费额度及额度用完提示。
+- 修改要求：只记录本批次中重要且用户能够明显感知的变化。在相关重要任务实际发布后，向现有 Changelog 顶部新增一条使用真实发布日期的英文记录：`Updated navigation and Workspace access across ImageHub, added smoother interactive before-and-after previews to Blur Background and AI Photo Editor, and clarified the shared allowance of three free tasks per user each day with a clear notice when the daily limit is reached.` 保留全部既有记录及其日期，并让最新记录排在最前。法律链接、尾斜杠重定向、Schema、Sitemap、图片尺寸与加载属性、Title、Meta Description、隐藏 DOM 清理及其他 SEO 或内部技术调整不得写入本批次公开记录。
 - 验收标准：`https://imagehub.ai/changelog/` 返回 200；最新记录日期与实际上线日期一致，正文逐字匹配指定英文文案；既有历史记录、Title、Meta Description、Canonical、H1、页脚链接和站点地图均保持正常。
-- 不要修改：不要记录代码文件、组件、架构、仓库、分支、提交、基础设施、服务商配置、成本、密钥、安全敏感实现、客户数据、内部指标、AI 提示词或内部工作流；如果本文件上述任务没有全部实际上线，不要提前发布该记录。
+- 不要修改：不要记录普通文案调整、轻微视觉样式、SEO 元数据、结构化数据、Sitemap、重定向、性能实现、代码文件、组件、架构、仓库、分支、提交、基础设施、服务商配置、成本、密钥、安全敏感实现、客户数据、内部指标、AI 提示词或内部工作流；不要为了凑齐发布记录而罗列小修复。如果本任务列出的重要变化没有实际上线，不要提前发布该记录；如果只有被排除的次要调整上线，不要新增 Changelog 记录。
