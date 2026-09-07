@@ -17,8 +17,8 @@ updated_at: "2026-09-07"
 
 - 优先级：`P0`
 - 页面或界面：全站页脚，以及待建立的 Privacy、Terms 与 About 页面
-- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。运营主体、地址和联系渠道不再是待决项，但 Privacy 和 Terms 所依赖的数据及法律规则仍未确认。
-- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、账户规则、内容与输出权利、商用许可、禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
+- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。用户还确认 Terms 必须禁止任何 NSFW 内容。运营主体、地址、联系渠道和 NSFW 禁令不再是待决项，但 Privacy 和 Terms 所依赖的其他数据及法律规则仍未确认。
+- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、账户规则、内容与输出权利、商用许可、NSFW 以外的禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
 - 选项与取舍：推荐分别建立长期可访问的 `/privacy/`、`/terms/`、`/about/`，让页脚链接直达并纳入站点地图。About 建议直接使用以下英文版本，不添加成立年份、团队规模、客户数量、总部、认证或其他未提供事实：
 
   > **About ImageHub**
@@ -37,7 +37,11 @@ updated_at: "2026-09-07"
   >
   > For product support, privacy questions, legal notices, or other enquiries, contact support@imagehub.ai.
 
-  Privacy 初稿至少应包含 `Who we are`、`Information we process`、`How we use information`、`Image and prompt processing`、`Cookies and local storage`、`Service providers and international transfers`、`Retention and deletion`、`Security`、`Your rights`、`Children`、`Changes`、`Contact`；Terms 初稿至少应包含 `Acceptance`、`Eligibility`、`Accounts`、`Permitted use`、`User content and permissions`、`Generated outputs`、`Prohibited use`、`ImageHub intellectual property`、`Third-party services`、`Availability and changes`、`Disclaimers`、`Limitation of liability`、`Indemnity`、`Suspension and termination`、`Governing law and disputes`、`Changes to these terms`、`Contact`。AI 不得用通用模板替代真实产品事实，不得擅自承诺不存储、不训练、无限免费、特定安全措施、特定权利响应期限或任何司法管辖规则。
+  Privacy 初稿至少应包含 `Who we are`、`Information we process`、`How we use information`、`Image and prompt processing`、`Cookies and local storage`、`Service providers and international transfers`、`Retention and deletion`、`Security`、`Your rights`、`Children`、`Changes`、`Contact`；Terms 初稿至少应包含 `Acceptance`、`Eligibility`、`Accounts`、`Permitted use`、`User content and permissions`、`Generated outputs`、`Prohibited use`、`ImageHub intellectual property`、`Third-party services`、`Availability and changes`、`Disclaimers`、`Limitation of liability`、`Indemnity`、`Suspension and termination`、`Governing law and disputes`、`Changes to these terms`、`Contact`。`Prohibited use` 必须包含以下英文规则，并覆盖用户上传、提示词、生成、编辑、转换和分享行为：
+
+  > **No NSFW content.** You must not use ImageHub to upload, submit, prompt for, generate, edit, transform, or share any content that is not safe for work (“NSFW”). This prohibition includes pornography, full or partial nudity, sexually explicit or sexually suggestive material, fetish content, sexual exploitation, sexual violence, graphic gore, and any sexualized content involving minors. NSFW content is prohibited without exception.
+
+  AI 不得弱化、删除或增加例外到上述禁令，也不得用通用模板替代真实产品事实；不得擅自承诺不存储、不训练、无限免费、特定安全措施、特定权利响应期限或任何司法管辖规则。
 
 ### 统一免费、登录、次数、输出与商用承诺
 
