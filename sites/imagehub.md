@@ -17,8 +17,8 @@ updated_at: "2026-09-07"
 
 - 优先级：`P0`
 - 页面或界面：全站页脚，以及待建立的 Privacy、Terms 与 About 页面
-- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。用户还确认 Terms 必须禁止任何 NSFW 内容。运营主体、地址、联系渠道和 NSFW 禁令不再是待决项，但 Privacy 和 Terms 所依赖的其他数据及法律规则仍未确认。
-- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、账户规则、内容与输出权利、商用许可、NSFW 以外的禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
+- 当前问题：截至 2026-09-07，首页和已抽查的工具页页脚都显示 `Privacy`、`Terms`、`About`，但三个链接实际均指向当前页面的 `#`，不会打开任何说明页面；公开站点地图列出的 33 个 URL 也不包含这些页面。用户已明确授权由 AI 生成三页的英文初稿，并提供以下未在公开站点核验的主体信息：运营主体为 `QUEST LABS LIMITED`，地址为 `RM 1605 HO KING COMM CTR, 2-16 FA YUEN ST, MONG KOK, HONG KONG`，联系邮箱为 `support@imagehub.ai`。用户还确认 Terms 必须禁止任何 NSFW 内容，并确认账户规则为：从每个独立功能落地页发起任务无需登录；从首页集合功能模块发起任务必须登录 Workspace。运营主体、地址、联系渠道、NSFW 禁令和上述登录边界不再是待决项，但 Privacy 和 Terms 所依赖的其他数据及法律规则仍未确认。
+- 需要决定：确认 Privacy 所需的每类真实数据流、处理方、跨境传输、存储与保留、Cookie、本地存储、训练用途和用户权利；确认 Terms 所需的最低年龄、除已确认登录边界外的账户规则、内容与输出权利、商用许可、NSFW 以外的禁止用途、投诉或下架流程、服务可用性、责任限制、赔偿、终止、适用法律和争议解决方式。确认后由 AI 基于这些事实完成 Privacy 与 Terms 英文正文，并交由合格法律顾问审核；同时批准下列 About 英文正文及三个最终 URL。
 - 选项与取舍：推荐分别建立长期可访问的 `/privacy/`、`/terms/`、`/about/`，让页脚链接直达并纳入站点地图。About 建议直接使用以下英文版本，不添加成立年份、团队规模、客户数量、总部、认证或其他未提供事实：
 
   > **About ImageHub**
@@ -41,15 +41,19 @@ updated_at: "2026-09-07"
 
   > **No NSFW content.** You must not use ImageHub to upload, submit, prompt for, generate, edit, transform, or share any content that is not safe for work (“NSFW”). This prohibition includes pornography, full or partial nudity, sexually explicit or sexually suggestive material, fetish content, sexual exploitation, sexual violence, graphic gore, and any sexualized content involving minors. NSFW content is prohibited without exception.
 
+  `Accounts` 必须包含以下已确认的英文规则：
+
+  > **Accounts and workspace access.** You can use ImageHub tools directly from their individual tool pages without creating an account or signing in. You must sign in to start a task from the all-in-one workspace on the ImageHub homepage. An account is required only for tasks started from the homepage workspace.
+
   AI 不得弱化、删除或增加例外到上述禁令，也不得用通用模板替代真实产品事实；不得擅自承诺不存储、不训练、无限免费、特定安全措施、特定权利响应期限或任何司法管辖规则。
 
-### 统一免费、登录、次数、输出与商用承诺
+### 正确区分首页 Workspace 与独立工具页的登录要求
 
 - 优先级：`P0`
-- 页面或界面：`https://imagehub.ai/`、全部 32 个工具页、登录弹窗及未来的 Terms 页面
-- 当前问题：首页 FAQ 写 `every tool here is free to use`、`Nothing is locked behind an account`、`There's no daily cap and no per-image credits`，并承诺结果无水印且可商用；Image Generator 也重复 `Free`、`No login`、`Unlimited runs`、`HD output`。但网站同时提供登录和保存工作区入口，部分公开工具页的登录弹窗显示 `Accounts are not available right now. Everything else on the site still works.`。当前没有公开条款、套餐边界或服务限制说明，访客无法判断这些绝对承诺是否适用于每个工具、匿名和登录状态、所有输出尺寸及长期产品规则。
-- 需要决定：确认每个工具在匿名与登录状态下的真实价格、次数或速率限制、排队和失败规则、输出尺寸与格式、水印规则、账户功能、商用许可及未来变更方式，并指定全站唯一事实来源。
-- 选项与取舍：推荐先建立一张内部可验证的能力与限制表，再把首页、工具页、登录弹窗和 Terms 统一到同一套英文文案；只有经过生产验证且可长期兑现的项目才保留 `free`、`no login`、`unlimited`、`HD`、`commercial use` 等绝对词。若存在公平使用、速率、文件、地区、模型或账户限制，应在首次使用前就用简洁限定语说明；若账户暂不可用，应隐藏或明确禁用入口并说明不影响哪些匿名功能。
+- 页面或界面：`https://imagehub.ai/` 的首屏集合功能模块、FAQ 和页脚，以及全部独立功能落地页
+- 当前问题：用户已确认唯一登录规则：从独立功能落地页发起任务无需登录，从首页集合功能模块发起任务必须登录 Workspace。当前独立 Image Generator 页面显示 `No login`，与其实际规则一致；但首页 FAQ 仍写 `No. ImageHub runs in your browser with no sign-up and no login` 和 `Nothing is locked behind an account`，首页 FAQ 标题使用 `Free, no login, no limits`，页脚也笼统显示 `Free · no sign-up`，没有说明这些承诺只适用于独立工具页。用户可能先在首页组合任务，到提交时才发现必须登录。
+- 需要决定：批准在首页集合功能模块提交前、FAQ 和全站共用简短标签中明确这一区别；同时仍需确认每个工具的真实价格、次数或速率限制、排队和失败规则、输出尺寸与格式、水印规则、商用许可及未来变更方式。
+- 选项与取舍：推荐保留所有独立功能落地页中真实的 `No login` 文案，不增加注册阻力；首页首屏集合功能模块在输入或提交区域持续显示 `Sign in to use the workspace. No account is required on individual tool pages.`；首页 FAQ 标题改为 `How ImageHub tools and workspace access work.`；问题 `Do I need an account or to log in?` 的答案改为 `You do not need an account when you use a tool from its individual tool page. Tasks started from the all-in-one workspace on the ImageHub homepage require you to sign in.`；全站共用的 `Free · no sign-up` 标签改为 `No sign-up on individual tool pages`。不得删除首页 Workspace 的登录要求，也不得要求用户登录后才能使用独立功能落地页。其余 `free`、`unlimited`、`HD`、`commercial use` 等绝对承诺只有在生产验证且可长期兑现时才能保留；存在公平使用、速率、文件、地区或模型限制时应增加准确限定语。
 
 ### 核实或删除无法公开验证的增长与效果数据
 
